@@ -14,6 +14,13 @@ cask "qstatus-menu" do
 
   app "QStatus.app", target: "Q Status.app"
 
+  postflight do
+    # Remove quarantine attribute to prevent Gatekeeper issues
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Q Status.app"],
+                   sudo: false
+  end
+
   uninstall quit: "com.qlips.qstatus"
 
   zap trash: [
