@@ -12,7 +12,7 @@ cask "qstatus-menu" do
     strategy :github_latest
   end
 
-  app "Q Status.app"
+  app "QStatus.app", target: "Q Status.app"
 
   uninstall quit: "com.qlips.qstatus"
 
