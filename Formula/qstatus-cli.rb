@@ -19,9 +19,9 @@ class QstatusCli < Formula
       QStatus CLI has been installed as 'qstatus'.
       
       Usage:
-        qstatus -i    # Interactive dashboard
-        qstatus       # Quick status check
-        qstatus --json # JSON output for scripts
+        qstatus                  # Run interactive dashboard (default)
+        qstatus --refresh-rate 5 # Custom refresh rate
+        qstatus --debug          # Enable debug logging
       
       For the menubar app, install with:
         brew install --cask qstatus-menu
